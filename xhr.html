@@ -7,10 +7,26 @@
     <title>XMLHttpRequest</title>
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <style>
+        ul li{
+            width:80%;
+            padding:10px;
+            border-radius:5px;
+            border:1px solid #ccc;
+            box-shadow:1px 1px 10px #aaa;
+            margin:10px;
+        }
+        ul li:hover{
+            width:81%;
+            background-color:lightgreen;
+        }
+    </style>
 </head>
 <body>
     <h1 class="header">XMLHttpRequest</h1>
+
     <div class="title"></div>
+    <div></div>
     <h4></h4>
     <ul></ul>
 
@@ -42,13 +58,13 @@
         let events=data.entry
         let li="";
         console.log(events);
-        events.forEach((event ,idx)=> {
+/*         events.forEach((event ,idx)=> {
             li=li+"<li>"+event.title+"</li>";
             
-        });
+        }); */
         //console.log(li)
         document.getElementsByTagName('ul')[0].innerHTML=li;
-        
+        document.getElementsByClassName('title')[0].innerHTML=data.title
 }   
 
     //送出請求
